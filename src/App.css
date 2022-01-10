@@ -1,6 +1,7 @@
 :root
 {
   --border-clr: rgb(168, 168, 168);
+  --repo-text-clr: rgb(77, 77, 77);
 }
 
 *
@@ -11,7 +12,7 @@
 
 body
 {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
 }
 
@@ -24,14 +25,13 @@ body
 header
 {
   height: 70vh;
-  width: 100vw;
+  width: 100%;
   background-color: rgb(39, 39, 39);
-  font-size: calc(1rem * 2.35);
 }
 
 main
 {
-  min-height: 30vh;
+  min-height: 65vh;
   height: auto;
   display: grid;
   grid-template-columns: 20% 80%;
@@ -63,17 +63,19 @@ aside
 
 .fl-wrap {flex-wrap: wrap;}
 
+
 h1
 {
   margin-bottom: 20px;
   color: white;
   text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.50);
+  font-size: 4vw;
 }
 
 #search
 {
   width: 35%;
-  height: calc(1rem * 3);
+  height: 48px;
   background-color: white;
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.50);
   margin-top: 20px;
@@ -82,9 +84,22 @@ h1
 .repo-card
 {
   width: 40%;
-  height: 2rem;
+  height: 4cm;
   border: 1px solid var(--border-clr);
-  border-radius: 0.2rem;
+  border-radius: 1vw;
+  position: relative;
+  box-sizing: border-box;
+  margin: 50px;
+  font-size: 0.9rem;
+  word-wrap: break-word;
+  display: grid;
+  grid-template-columns: 10% 90%;
+}
+
+.text-section > p 
+{
+  max-width: max-content;
+  color: var(--repo-text-clr);
 }
 
 section
@@ -92,3 +107,43 @@ section
   width: 100%;
   height: 100%;
 }
+
+@media screen and (max-width: 1250px ) 
+{
+  .repo-card
+  {
+    width: 80%;
+  }
+
+  main
+  {
+    grid-template-columns: 40% 60%;
+  }
+
+}
+
+.icons
+{
+  background-color: rgb(39, 39, 39);
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 1vw;
+  border-bottom-left-radius: 1vw;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+
+.text-section
+{
+  padding: 0.8rem;
+  padding-top: 1.4rem;
+  padding-bottom: 1.45rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+img { width: 35%; }

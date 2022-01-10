@@ -1,4 +1,5 @@
 import './App.css';
+import Repo from './Repo';
 
 function App() {
   return <>
@@ -9,10 +10,7 @@ function App() {
   <main>
     <aside></aside>
     <section className='flex fl-wrap' >
-      {/* <div className="repo-card"></div>
-      <div className="repo-card"></div>
-      <div className="repo-card"></div>
-      <div className="repo-card"></div> */}
+      < Repo />
     </section>
   </main>
   </>
