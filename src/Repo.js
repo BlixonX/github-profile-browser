@@ -2,15 +2,11 @@ import React from 'react'
 
 function Repo() 
 {
-    const titleIcon = 'https://flaticons.net/custom.php?i=QOYTP8Hl8Eg2i5I8IDIRwc90X3Mun&format=png&size=256';
-    const descriptionIcon = 'https://flaticons.net/custom.php?i=lEbfx8IReVDkuZIkIlIV2Tplmb6I8&format=png&size=256';
-    const programmingLangIcon = 'https://flaticons.net/custom.php?i=mlh0XsmGOv9fPIDIvIreFA83vMul&format=png&size=256';
-
     return <div className='repo-card' onClick={() => document.location.href='/'}>
         <div className='icons'>
-            <img src={titleIcon} alt="" />
-            <img src={descriptionIcon} alt="" />
-            <img src={programmingLangIcon} alt="" />
+            <img src="./icons/title_icon.png" alt="" />
+            <img src="./icons/description_icon.png" alt="" />
+            <img src="./icons/language_icon.png" alt="" />
         </div>
         <div className='text-section'>
             <h3>Repo title</h3>
