@@ -1,17 +1,17 @@
 import React from 'react'
 
-function Repo() 
+function Repo({title, description, language, url}) 
 {
-    return <div className='repo-card' onClick={() => document.location.href='/'}>
+    return <div className='repo-card' onClick={() => document.location.href=url}>
         <div className='icons'>
-            <img src="./icons/title_icon.png" alt="" />
-            <img src="./icons/description_icon.png" alt="" />
-            <img src="./icons/language_icon.png" alt="" />
+            <div className="img" style={{backgroundImage: 'url(icons/title_icon.png)'}} ></div>
+            <div className="img" style={{backgroundImage: 'url(icons/description_icon.png)'}} ></div>
+            <div className="img" style={{backgroundImage: 'url(icons/language_icon.png)'}} ></div>
         </div>
         <div className='text-section'>
-            <h3>Repo title</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam neque saepe placeat ipsum libero blanditiis, voluptatibus itaque dolor fugiat! Iusto.</p>
-            <p>C++</p>
+            <h3>{title}</h3>
+            <p>{description || "No description."}</p>
+            <p>{language || "No language"}</p>
         </div>
     </div>
 }

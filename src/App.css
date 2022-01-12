@@ -82,19 +82,27 @@ h1
   display: flex;
 }
 
-#search > img
+#search > .img
 {
   margin: 6px;
   width: 36px;
+  height: 36px;
   opacity: 0.25;
+  background-position: center;
+  background-size: contain;
 }
-#search > img:first-child
+#search > .img:first-child
 {
   animation-name: blink;
   animation-duration: 1s;
   animation-fill-mode: both;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+}
+
+#search > .img:last-child:active
+{
+  opacity: 0.5;
 }
 
 @keyframes blink
@@ -125,6 +133,8 @@ h1
   outline: none;
   font-size: x-large;
   text-align: center;
+  color: var(--repo-text-clr);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
 }
 
 #search input[type=text]:focus 
@@ -198,4 +208,10 @@ section
   flex-direction: column;
 }
 
-img { width: 35%; }
+.icons > .img
+{
+  width: 35%;
+  padding-top: 35%;
+  background-position: center;
+  background-size: contain;
+}
