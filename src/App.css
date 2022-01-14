@@ -64,6 +64,7 @@ aside
 
 .fl-wrap {flex-wrap: wrap;}
 
+.fl-between { justify-content: space-evenly;}
 
 h1
 {
@@ -130,7 +131,7 @@ h1
 #search input[type=text]
 {
   position: relative;
-  
+  background-color: transparent;
   height: 48px;
   width: calc(100% - 96px);
   margin: 0;
@@ -145,6 +146,28 @@ h1
 #search input[type=text]:focus 
 {
   background-color: rgba(0, 0, 0, 0.05);
+}
+
+.error
+{
+  animation-name: error;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+@keyframes error
+{
+  0%, 40%, 80%
+  {
+    background-color: rgba(255, 0, 0, 0.5);
+  }
+
+  20%, 60%, 100%
+  {
+    background-color: #FFF;
+  }
 }
 
 .repo-card
@@ -275,4 +298,40 @@ a
 {
   text-decoration: none;
   color: initial;
+}
+
+.filters
+{
+  margin-top: 15px;
+  width: 20%;
+  height: 25px;
+  color: white;
+  font-weight: bold;
+  text-shadow: rgb(0, 0, 0) 2px 0px 0px, rgb(0, 0, 0) 1.75517px 0.958851px 0px, rgb(0, 0, 0) 1.0806px 1.68294px 0px, rgb(0, 0, 0) 0.141474px 1.99499px 0px, rgb(0, 0, 0) -0.832294px 1.81859px 0px, rgb(0, 0, 0) -1.60229px 1.19694px 0px, rgb(0, 0, 0) -1.97998px 0.28224px 0px, rgb(0, 0, 0) -1.87291px -0.701566px 0px, rgb(0, 0, 0) -1.30729px -1.5136px 0px, rgb(0, 0, 0) -0.421592px -1.95506px 0px, rgb(0, 0, 0) 0.567324px -1.91785px 0px, rgb(0, 0, 0) 1.41734px -1.41108px 0px, rgb(0, 0, 0) 1.92034px -0.558831px 0px;
+}
+
+input[type=checkbox]
+{
+  margin-right: 5px;
+  accent-color: rgb(88, 88, 88);
+}
+
+@supports(-webkit-appearance: none) or (-moz-animation: none)
+{
+  input[type=checkbox]
+  {
+    position: relative;
+    top: 1px;
+    background-color: red;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 2px solid black;
+    border-radius: 2px;
+    width: 15px;
+    height: 15px;
+  }
+  input[type=checkbox]:checked
+  {
+    background-color: #0F0;
+  }
 }
