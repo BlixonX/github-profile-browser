@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import Repo from './Repo';
+import Copyright from './Copyright';
 
 function App() 
 {
@@ -54,6 +55,7 @@ function App()
   // COMPONENT
   return <>
   <header className='flex fl-col'>
+    <Copyright />
     <h1>Github profile browser</h1>
     <div id="search">
       <div className="img" style={{backgroundImage: 'url(icons/search_arrow_icon.png)'}} ></div>
