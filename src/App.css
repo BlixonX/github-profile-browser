@@ -262,7 +262,7 @@ section
   width: 100%;
   height: min-content;
   position: sticky;
-  top: calc(100% / 4);
+  top: 50px;
 }
 
 #userdata > h3, #userdata > h2 {text-align: center;}
@@ -336,7 +336,7 @@ input[type=checkbox]
   }
 }
 
-a
+header > a
 {
   text-decoration: none;
   color: var(--border-clr);
@@ -346,3 +346,18 @@ a
   background-color: rgba(0, 0, 0, 0.50);
   z-index: 5;
 }
+
+.repo-card > a
+{
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  width: 17px;
+  height: 17px;
+  opacity: 0.3;
+  background-image: url(icons/link_icon.png);
+  background-position: center;
+  background-size: contain;
+}
+.repo-card > a:hover {opacity: 0.7;}
